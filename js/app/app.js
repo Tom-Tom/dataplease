@@ -1,6 +1,8 @@
 /* Init app */
 
-var datapleaseApp = angular.module('datapleaseApp', ['ngRoute', 'datapleaseControllers', 'datapleaseServices']);
+var datapleaseApp = angular.module('datapleaseApp', 
+	['ngRoute', 'datapleaseControllers', 'datapleaseServices']
+);
 
 var configApi = {
 	base: 'http://datacities.herokuapp.com'

@@ -14,21 +14,21 @@ datapleaseServices.factory('Data', ['$resource', function ($resource){
 			},
 			getRegion: {
 				method:'GET',
-				params:{regionId:':regionId'},
+				params:{regionId:':regionSlug'},
 			    isArray:false,
-			    url: configApi.base+'/region/:regionId'
+			    url: configApi.base+'/region/:regionSlug'
 			},
 			getAllDepartments: {
 				method:'GET',
-				params:{regionId:':regionId'},
+				params:{regionId:':regionSlug'},
 			    isArray:true,
-			    url: configApi.base+'/region/:regionId/departement'
+			    url: configApi.base+'/region/:regionSlug/departement'
 			},
 			getDepartment: {
 				method:'GET',
-				params:{regionId:':regionId', departmentId:':departementId'},
+				params:{regionId:':regionSlug', departmentSlug:':departementSlug'},
 			    isArray:false,
-			    url: configApi.base+'/region/:regionId/departement/:departmentId'
+			    url: configApi.base+'/region/:regionSlug/departement/:departmentSlug'
 			}
 		}
 	);
