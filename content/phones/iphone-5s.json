@@ -1,0 +1,9 @@
+{
+	"title": "Super iPhone",
+	"description": "Super élégant",
+	"tech": {
+		"flash": "16273MB",
+		"ram": "512MB"
+	},
+	"image": "iphone.jpg"
+}

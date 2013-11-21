@@ -1,0 +1,27 @@
+<header>
+	<input type="search" placeholder="Rechercher..." ng-model="query">
+	<span>{{query}}</span>
+	<select ng-model="orderProp">
+	  <option value="name">Alphabetical</option>
+	  <option value="age">Newest</option>
+	</select>
+</header>
+
+<div id="content">
+	<div class="wrapper">
+		<section>
+			<span>{{hello}} | Number of phones : {{phones.length}}</span>
+			<ul class="list_phones">
+				<li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+					<a href="#/phones/{{phone.slug}}">
+						<img src="img/{{phone.image}}" alt="">
+						<span>{{phone.name}}</span>
+						<p>{{phone.description}}</p>
+					</a>	
+				</li>
+			</ul>
+		</section>
+	</div>
+</div>
+
+<div my-customer></div>

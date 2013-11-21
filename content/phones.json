@@ -1,0 +1,30 @@
+[
+	{
+		"slug": "nexus-s",
+		"name": "Nexus S",
+		"description": "Super Nexus S",
+		"image": "iphone.jpg",
+		"age": 26
+	},
+	{
+		"slug": "nokia-3310",
+		"name": "Nokia 3310",
+		"description": "Super Nokia 3310",
+		"image": "iphone.jpg",
+		"age": 18
+	},
+	{
+		"slug": "samsung-galaxy-s2",
+		"name": "Samsung Galaxy S2",
+		"description": "Super Samsung Galaxy S2",
+		"image": "iphone.jpg",
+		"age": 12
+	},
+	{
+		"slug": "iphone-5s",
+		"name": "iPhone 5S",
+		"description": "Super iPhone 5S",
+		"image": "iphone.jpg",
+		"age": 1
+	}
+]
