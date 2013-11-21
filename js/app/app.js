@@ -5,28 +5,43 @@ var datapleaseApp = angular.module('datapleaseApp',
 );
 
 var configApi = {
-	base: 'http://datacities.herokuapp.com'
+	base: 'http://datacities.herokuapp.com',
+	slug_regions: 'region',
+	slug_departments: 'departement',
+	slug_cities: 'commune'
 }
 
 /* Config app */
 
 datapleaseApp.config(['$routeProvider', function ($routeProvider){
 	$routeProvider
-	.when('/region', {
+	.when('/', {
 			templateUrl: 'templates/welcome.html',
+			controller: 'SearchCtrl'
+		})
+	.when('/region', {
+			templateUrl: 'templates/data.html',
 			controller: 'RegionsAllCtrl'
 		})
 	.when('/region/:regionSlug', {
-			templateUrl: 'templates/welcome.html',
+			templateUrl: 'templates/data.html',
 			controller: 'RegionCtrl'
 		})
-	.when('/region/:regionSlug/departement', {
-			templateUrl: 'templates/welcome.html',
+	.when('/departement', {
+			templateUrl: 'templates/data.html',
 			controller: 'DepartmentsAllCtrl'
 		})
-	.when('/region/:regionSlug/departement/:departmentSlug', {
-			templateUrl: 'templates/welcome.html',
+	.when('/departement/:departmentSlug', {
+			templateUrl: 'templates/data.html',
 			controller: 'DepartmentCtrl'
+		})
+	.when('/city', {
+			templateUrl: 'templates/data.html',
+			controller: 'DepartmentsAllCtrl'
+		})
+	.when('/city/:citySlug', {
+			templateUrl: 'templates/data.html',
+			controller: 'CityCtrl'
 		})
 	.otherwise({
 		redirectTo: '/lol'

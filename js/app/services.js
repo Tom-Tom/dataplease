@@ -10,25 +10,35 @@ datapleaseServices.factory('Data', ['$resource', function ($resource){
 			getAllRegions: {
 				method:'GET',
 			    isArray:true,
-			    url: configApi.base+'/region'
+			    url: configApi.base+'/'+configApi.slug_regions
 			},
 			getRegion: {
 				method:'GET',
-				params:{regionId:':regionSlug'},
+				params:{regionSlug:':regionSlug'},
 			    isArray:false,
-			    url: configApi.base+'/region/:regionSlug'
+			    url: configApi.base+'/'+configApi.slug_regions+'/:regionSlug'
 			},
 			getAllDepartments: {
 				method:'GET',
-				params:{regionId:':regionSlug'},
 			    isArray:true,
-			    url: configApi.base+'/region/:regionSlug/departement'
+			    url: configApi.base+'/'+configApi.slug_departments
 			},
 			getDepartment: {
 				method:'GET',
-				params:{regionId:':regionSlug', departmentSlug:':departementSlug'},
+				params:{departmentSlug:':departementSlug'},
 			    isArray:false,
-			    url: configApi.base+'/region/:regionSlug/departement/:departmentSlug'
+			    url: configApi.base+'/'+configApi.slug_departments+'/:departmentSlug'
+			},
+			getAllCities: {
+				method:'GET',
+			    isArray:true,
+			    url: configApi.base+'/'+configApi.slug_cities
+			},
+			getCity: {
+				method:'GET',
+				params:{citySlug:':citySlug', dataId:':dataId'},
+			    isArray:false,
+			    url: configApi.base+'/'+configApi.slug_cities+'/:citySlug'
 			}
 		}
 	);

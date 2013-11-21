@@ -1,6 +1,25 @@
-<div id="content">
-	
-	<input ng-model="query" type="text">
+<!-- <header>
+	<div class="wrapper">
+		<form ng-submit="submit('')">
+			<input type="search" placeholder="Rechercher..." ng-model="query">
+		</form>
+		<span>{{query}}</span>
+	</div>
+</header> -->
 
-	<p>{{data | json}}</p>
+<div id="content">
+	<div class="wrapper tpl_home">
+		<div>
+
+			<h1>DataPlease</h1>
+			
+			<form ng-submit="submit()">
+				<input class="input_what" type="text" placeholder="Quoi ?" ng-model="query.what">
+				<input class="input_where" type="text" placeholder="Où ?" ng-model="query.where">
+				<input class="input_when" type="text" placeholder="Quand ?" ng-model="query.when">
+				<input class="input_search" type="submit" value="Rechercher">
+			</form>
+
+		</div>
+	</div>
 </div>
