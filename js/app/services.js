@@ -7,11 +7,28 @@ var datapleaseServices = angular.module('datapleaseServices', ['ngResource']);
 datapleaseServices.factory('Data', ['$resource', function ($resource){
 	return $resource(configApi.base, {}, 
 		{ 	
+			getAllRegions: {
+				method:'GET',
+			    isArray:true,
+			    url: configApi.base+'/region'
+			},
 			getRegion: {
 				method:'GET',
-				params:{regionId:':regionId'},
+				params:{regionId:':regionSlug'},
 			    isArray:false,
-			    url: configApi.base+'/region/:regionId'
+			    url: configApi.base+'/region/:regionSlug'
+			},
+			getAllDepartments: {
+				method:'GET',
+				params:{regionId:':regionSlug'},
+			    isArray:true,
+			    url: configApi.base+'/region/:regionSlug/departement'
+			},
+			getDepartment: {
+				method:'GET',
+				params:{regionId:':regionSlug', departmentSlug:':departementSlug'},
+			    isArray:false,
+			    url: configApi.base+'/region/:regionSlug/departement/:departmentSlug'
 			}
 		}
 	);
