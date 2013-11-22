@@ -46,6 +46,8 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 		citySlug:$routeParams.citySlug
 	};
 
+	$scope.data = Data.getCity(params);
+
 	if($location.hash()){
 		params['dataId'] = $location.hash();
 		Data.getCity(params, function(output){
@@ -54,7 +56,7 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 		});
 	}
 
-	$scope.data = Data.getCity(params);
+	
 
 	//console.log($location.search(), $location.hash());
 }])
