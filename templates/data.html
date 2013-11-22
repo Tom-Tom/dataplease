@@ -1,5 +1,7 @@
-<div id="content">
+<div id="content" class="tpl_data">
 	<div class="wrapper">
+		<h1>Données de {{data.LIBGEO}}</h1>
+		<pre ng-show="data.resultValue">{{data.resultKey | json}}: {{data.resultValue | json}}</pre>
 		<pre>{{data | json}}</pre>
 	</div>
 </div>

@@ -23,33 +23,32 @@ li{list-style:none}
    ========================================================================== */
 
 body{ font:normal 75% Arial, Helvetica, sans-serif; background:#f2f2f2; }
-.wrapper{ width:1000px; margin:0 auto; padding:0 20px; }
+.wrapper{ max-width:1000px; margin:0 auto; padding:0 20px; }
 
 /* =============================================================================
    My CSS
    ========================================================================== */
 
 header{ height:20px; line-height:20px; background:#eee; border-bottom:1px solid #ddd; padding:20px; }
-
 #content{ margin-top:20px; }
 
-.list_phones a{ color:#222; }
-.list_phones li{ padding:20px; background:#eee; margin-bottom:10px; }
-.list_phones li:first-child{ margin-top:20px }
-.list_phones img{ width:40px; float:left; margin-right:20px; }
-
+/* TPL - Home */
 
 .tpl_home{ text-align:center; }
+
 .tpl_home h1{ margin:20px; font-size:3em; color:#222; }
-
-.tpl_home input{ display:block; padding:10px 12px; width:300px; border:1px solid #ccc; border-radius:3px; font-size:1.6em; outline:0; font-family:Arial; }
-
+.tpl_home > div{ width:980px; height:400px; position:absolute; top:50%; left:50%; margin:-200px 0 0 -490px; }
 
 .tpl_home form{ width:700px; margin:0 auto; }
+.tpl_home input{ display:block; padding:10px 12px; width:300px; border:1px solid #ccc; border-radius:3px; font-size:1.6em; outline:0; font-family:Arial; }
+
 .tpl_home .input_what{ width:637px; margin:0 auto 10px auto; }
 .tpl_home .input_where{ margin-right:8px; }
 .tpl_home .input_where, .tpl_home .input_when{ display:inline-block; vertical-align:top }
-
 .tpl_home .input_search{ margin:20px auto 0 auto; width:auto; padding:10px 20px; background:#20435c; color:#fff; cursor:pointer; border:1px solid #222; }
 
-.tpl_home > div{ width:980px; height:400px; position:absolute; top:50%; left:50%; margin:-200px 0 0 -490px; }
+
+/* TPL - Data */
+
+.tpl_data h1{ font-size:2em; margin-bottom:20px }
+.tpl_data pre{ background: #fff; border-radius: 5px; padding: 30px; margin: 20px 0; }
