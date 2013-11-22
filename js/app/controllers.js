@@ -62,15 +62,40 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 
 	$scope.data = Data.getCity(params);
 
+	$scope.data.$promise.then(function(d){
+
+		var dataType = ["chomage",
+		"demoEntreprises",
+		"diplomesFormation",
+		"emploiPopActive",
+		"emploi",
+		"entreprisesEtablissement",
+		"famille",
+		"impots",
+		"logement",
+		"revenusMenage",
+		"salaire",
+		"structurePopulation"];
+
+		for(i in dataType){
+		    var type = dataType[i];
+		    for(k in $scope.data[type]){
+		        $scope.data[k] = $scope.data[type][k];
+		    }
+		    delete $scope.data[type];
+		}
+
+	});
+
 	if(params['dataId']){
+		console.log(params['dataId']);
 		Data.getCity(params, function(output){
-			$scope.data = output.chomage[params['dataId']];
+			// console.log(output);
+			$scope.data = output[params['dataId']];
 		});
 	}
 
 	//console.log($location.search(), $location.hash());
-
-
 
 }])
 
