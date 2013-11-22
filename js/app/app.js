@@ -35,11 +35,11 @@ datapleaseApp.config(['$routeProvider', function ($routeProvider){
 			templateUrl: 'templates/data.html',
 			controller: 'DepartmentCtrl'
 		})
-	.when('/city', {
+	.when('/commune', {
 			templateUrl: 'templates/data.html',
 			controller: 'DepartmentsAllCtrl'
 		})
-	.when('/city/:citySlug', {
+	.when('/commune/:citySlug', {
 			templateUrl: 'templates/data.html',
 			controller: 'CityCtrl'
 		})

@@ -46,3 +46,9 @@ header{ height:20px; line-height:20px; background:#eee; border-bottom:1px solid 
 .tpl_home .input_where{ margin-right:8px; }
 .tpl_home .input_where, .tpl_home .input_when{ display:inline-block; vertical-align:top }
 .tpl_home .input_search{ margin:20px auto 0 auto; width:auto; padding:10px 20px; background:#20435c; color:#fff; cursor:pointer; border:1px solid #222; }
+
+
+/* TPL - Data */
+
+.tpl_data h1{ font-size:2em; margin-bottom:20px }
+.tpl_data pre{ background: #fff; border-radius: 5px; padding: 30px; margin: 20px 0; }
