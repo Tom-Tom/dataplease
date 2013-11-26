@@ -38,7 +38,7 @@ datapleaseServices.factory('Data', ['$resource', function ($resource){
 				method:'GET',
 				params:{citySlug:':citySlug', dataId:':dataId'},
 			    isArray:false,
-			    url: configApi.base+'/'+configApi.slug_cities+'/:citySlug'
+			    url: configApi.base+'/'+configApi.slug_cities+'/:citySlug?orderParam=list'
 			}
 		}
 	);
