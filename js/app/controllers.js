@@ -76,7 +76,6 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 	if($location.hash()){
 		params['dataId'] = $location.hash();
 		Data.getCity(params, function(output){
-			console.log(output);
 			$scope.data.resultKey = params['dataId'];
 			$scope.data.resultValue = output[0][params['dataId']];
 		});
