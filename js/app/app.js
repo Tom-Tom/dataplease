@@ -1,5 +1,4 @@
 /* Init app */
-
 var datapleaseApp = angular.module('datapleaseApp', 
 	['ngRoute', 'datapleaseControllers', 'datapleaseServices']
 );
@@ -12,8 +11,8 @@ var configApi = {
 }
 
 /* Config app */
-
 datapleaseApp.config(['$routeProvider', function ($routeProvider){
+
 	$routeProvider
 	.when('/', {
 			templateUrl: 'templates/welcome.html',

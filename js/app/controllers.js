@@ -48,7 +48,6 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 	};
 
 	$scope.data = Data.getCity(params);
-
 	$scope.data.$promise.then(function(d){
 
 		var dataType = ["chomage",
