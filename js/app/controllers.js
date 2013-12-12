@@ -48,30 +48,6 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 	};
 
 	$scope.data = Data.getCity(params);
-	$scope.data.$promise.then(function(d){
-
-		var dataType = ["chomage",
-		"demoEntreprises",
-		"diplomesFormation",
-		"emploiPopActive",
-		"emploi",
-		"entreprisesEtablissement",
-		"famille",
-		"impots",
-		"logement",
-		"revenusMenage",
-		"salaire",
-		"structurePopulation"];
-
-/*		for(i in dataType){
-		    var type = dataType[i];
-		    for(k in $scope.data[type]){
-		        $scope.data[k] = $scope.data[type][k];
-		    }
-		    delete $scope.data[type];
-		}
-*/
-	});
 
 	if($location.hash()){
 		params['dataId'] = $location.hash();
@@ -80,13 +56,7 @@ datapleaseApp.controller('CityCtrl', ['$scope', '$routeParams', 'Data', '$locati
 			$scope.data.resultValue = output[0][params['dataId']];
 		});
 	}
-	//console.log($location.search(), $location.hash());
-
-
-
 	
-
-	//console.log($location.search(), $location.hash());
 }])
 
 
